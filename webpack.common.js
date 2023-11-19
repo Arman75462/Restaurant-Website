@@ -2,7 +2,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    menu: "./src/menu.js",
+    contact: "./src/contact.js",
+  },
 
   devtool: "inline-source-map",
   devServer: {
@@ -25,6 +29,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      filename: "index.html",
+      chunks: ["index"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/menu.html",
+      filename: "menu.html",
+      chunks: ["menu"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/contact.html",
+      filename: "contact.html",
+      chunks: ["contact"],
     }),
   ],
 };

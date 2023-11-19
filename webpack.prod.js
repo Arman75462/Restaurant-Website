@@ -13,7 +13,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "dist"),
   },
 
-  plugins: [new MiniCssExtractPlugin({ filename: "[name].css" })],
+  plugins: [new MiniCssExtractPlugin()],
 
   optimization: {
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
