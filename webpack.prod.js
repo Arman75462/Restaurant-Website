@@ -13,6 +13,12 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "dist"),
   },
 
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
+
   plugins: [new MiniCssExtractPlugin()],
 
   optimization: {
