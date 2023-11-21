@@ -1,2 +1,2 @@
 import "./contact.css";
-import "./Toronto-Map-Canada.jpg";
+import "./Toronto-Map-Canada.webp";
